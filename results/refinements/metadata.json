@@ -1,0 +1,16 @@
+{
+  "seed": 20260930,
+  "replicates": 10000,
+  "reference": "NFC in both language and English",
+  "unicode_library_version": "2026.9.10",
+  "inputs": {
+    "data/processed/flores_plus_four_languages.csv": "3be0e3183b9708b3fa2d39f838de5b498d75994f148344e0824c088a32cc2103",
+    "results/raw/orthography_metrics.csv": "e17b3963ba7e5002d8a481690082191eeeb77f2abc2eacdd4e6595c2d4d32a4b"
+  },
+  "outputs": {
+    "results/refinements/REFINED_RESULTS.md": "34337847a895945f80d1ca08f8fb2edf7457f1ae5d4ee7c9a02e91ea5a1c50f5",
+    "results/refinements/premium_perturbations.csv": "fc4e1511e99233bd25a979a0537a92234964980bfc5a643fbf1f6c7fb8ae10e6",
+    "results/refinements/word_boundary_sensitivity.csv": "710113a069418a6e6cbbc0a498c259b0f96e2d5e35c9a6db0513aef5688074c7",
+    "results/refinements/normalization_comparison.csv": "8326772bb669b0ffa3b7993d5f44f9f322494c6e588ba42f16f5f3896bf89b2e"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "prepared_at_utc": "2026-10-01T08:12:35.739481+00:00",
+  "huggingface_repository": "HausaNLP/NaijaSenti-Twitter",
+  "huggingface_loader_revision": "a3d0415a828178edf3466246f49cfcd83b946ab3",
+  "source_repository": "https://github.com/hausanlp/NaijaSenti",
+  "source_revision": "3f267dd565573500ee34e99df19171be3e056be0",
+  "license": "CC BY-NC-SA 4.0 per original HF dataset card",
+  "citation": "Muhammad et al. (2022), NaijaSenti, https://aclanthology.org/2022.lrec-1.63/",
+  "source_hashes": {
+    "data/raw/naijasenti/hau_train.tsv": "0a125f4528d1ae86b112ec5d3d66312fcb154883a5a021c6ab913cd2ce877d87",
+    "data/raw/naijasenti/hau_dev.tsv": "6f895e66fb732b45fad926315841c41da8fc03dde2aef3a5386183bdcf15221b",
+    "data/raw/naijasenti/hau_test.tsv": "29b2193808935c459e323b4434f9d1e1968883eed273617f43510b7127a3fa0a",
+    "data/raw/naijasenti/ibo_train.tsv": "6f0fb58fbaff2401d8944d41bae53cc7dafe1ccae7de42a81915ddc974abb300",
+    "data/raw/naijasenti/ibo_dev.tsv": "a52e7248af999b65a7d49e11d781b08c2528411ef25d8b9419c7e6280622e8f8",
+    "data/raw/naijasenti/ibo_test.tsv": "b91481b377e96b394b96e04dd2577c335fe117e03271dcbf0f4da2a7b785b92f",
+    "data/raw/naijasenti/yor_train.tsv": "2ef112428030c5b209178b8fdb479f83152c75dcd9279726937968e9093270b0",
+    "data/raw/naijasenti/yor_dev.tsv": "1a48880716ef3e697b1ce9bcde6a3c63d9f59afb7fe217fc882cf2e330e60100",
+    "data/raw/naijasenti/yor_test.tsv": "e323bfea0c888675e8b3e51413e9e4612ead674fc3d9d3a8c5485175adf88e1e"
+  },
+  "source_counts": {
+    "hau:train": 14172,
+    "hau:dev": 2677,
+    "hau:test": 5303,
+    "ibo:train": 10192,
+    "ibo:dev": 1841,
+    "ibo:test": 3682,
+    "yor:train": 8522,
+    "yor:dev": 2090,
+    "yor:test": 4515
+  },
+  "audit": [
+    {
+      "language": "Hausa",
+      "unique_tweets": 21937,
+      "whitespace_units": 298517,
+      "exact_duplicates_removed": 215,
+      "empty_rows_removed": 0,
+      "tweets_with_mentions": 16626,
+      "tweets_with_urls": 501,
+      "tweets_with_diacritics": 122,
+      "tweets_with_hashtags": 377
+    },
+    {
+      "language": "Igbo",
+      "unique_tweets": 15677,
+      "whitespace_units": 185661,
+      "exact_duplicates_removed": 38,
+      "empty_rows_removed": 0,
+      "tweets_with_mentions": 8211,
+      "tweets_with_urls": 3032,
+      "tweets_with_diacritics": 4219,
+      "tweets_with_hashtags": 1237
+    },
+    {
+      "language": "Yoruba",
+      "unique_tweets": 14890,
+      "whitespace_units": 316888,
+      "exact_duplicates_removed": 237,
+      "empty_rows_removed": 0,
+      "tweets_with_mentions": 4566,
+      "tweets_with_urls": 2187,
+      "tweets_with_diacritics": 11739,
+      "tweets_with_hashtags": 5867
+    }
+  ],
+  "preparation": "Published tweet strings unchanged; remove empty rows and exact duplicates within each language across splits",
+  "input_sha256": "856b6eeb68301d6199af05ef62461495ec9c21b0e7661029035eaa05da12517c"
+}

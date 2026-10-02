@@ -1,0 +1,30 @@
+{
+  "seed": 20260930,
+  "replicates": 10000,
+  "batch_size": 100,
+  "method": "Percentile 95% bootstrap; common aligned split/sentence_id indices for target and English and every condition within each comparison",
+  "definition": "total target-language tokens / total English tokens; no word-count denominator",
+  "normalization": "NFC",
+  "English_normalization_audit": {
+    "English_sentences": 2009,
+    "English_not_NFC": 0
+  },
+  "tokenizers": {
+    "natlas_llama": {
+      "model_id": "NCAIR1/N-ATLaS",
+      "revision": "e294476928aca9030e924ca27bb8e085e8581273"
+    },
+    "gemma4": {
+      "model_id": "google/gemma-4-12B",
+      "revision": "023679ed352de9bb66cc873c9009ce3482585c08"
+    }
+  },
+  "source_sha256": "3be0e3183b9708b3fa2d39f838de5b498d75994f148344e0824c088a32cc2103",
+  "raw_sha256": "25a237d4c301a1b566d2129ea8c331e288c37dca968a358baba97cd732c71bb5",
+  "outputs": {
+    "results/token_total_premiums/excess_removed.csv": "9cad1fcc32fd8c5070fb69990ecec54bbb289ea48c2ed29eb70332fd22712c44",
+    "results/token_total_premiums/RESULTS.md": "bb4af5f168adf20009164d753c5d71128b2bd5298e4369ac4251e314c228fd6f",
+    "results/token_total_premiums/premiums.csv": "92d5fb205503f048a6e062ad30dcc9090f4632cf31e5a5952904f5cf5b79d9ba",
+    "results/token_total_premiums/NFC_descriptive.csv": "6cd238037c37a0397ab13a34616471d822382917ae848dcf27bddb5b486123c7"
+  }
+}

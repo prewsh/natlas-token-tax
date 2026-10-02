@@ -1,0 +1,16 @@
+{
+  "run_at_utc": "2026-10-01T08:13:19.558869+00:00",
+  "outputs": {
+    "results/naijasenti/summary.csv": "fdc21ddadc8c61023ae9d1188d5a155c79cd819e4f0cdd58a5ffedf44143810d",
+    "results/naijasenti/sensitivity_summary.csv": "4b2024f478765550f6e42b084cc859ea8d6839cb877fa98e3d97eae4f93a55df",
+    "results/naijasenti/paired_metadata.json": "6ad88636ec2ad94280f7d318598d866dc672390a7ce6e92030c2f9396c08c9e0",
+    "results/naijasenti/three_corpus_comparison.svg": "03e2faf8f8aafc1fa55823b685e04d739cfa6fea274c03edb49942bfceba9eb3",
+    "results/naijasenti/PAIRED_RESULTS.md": "84fff60a6305511be14634cd6ba9681a87b191ca708413e6b826c297472bf8ae",
+    "results/naijasenti/RESULTS.md": "d051610fc1acff6beac89ef6ee59abd1ef821ff789dd412a32ff6501378c3f30",
+    "results/naijasenti/paired_comparison.csv": "3525ef7f1690e9d3717796b17a94ed2bdb2f88d31e0e3c9bb0c6cf46fe06b338",
+    "results/naijasenti/tokenization_metadata.json": "307eb71b60250e2eb8bdefbff4176a31df537a7a105348671aa61c3b2859619a",
+    "results/naijasenti/corpus_audit.csv": "b0a8bbd5229cc71533cfdb1aa8e7a783ffd1adfd36ec375b1da82bf719c1a93f",
+    "results/naijasenti/three_corpus_comparison.png": "5871dd310dba20c9ddd1922b68037afe5fba91d692d032e2af5ee2cff09a3079"
+  },
+  "sensitivity_raw_sha256": "fccba23f6da348dad8534cb28c10aac97047e03ed6244a1f9472a1e7a96e3923"
+}

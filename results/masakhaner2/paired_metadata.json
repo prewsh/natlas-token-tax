@@ -1,0 +1,24 @@
+{
+  "analysis": "Paired N-ATLaS versus Gemma 4 comparison",
+  "run_at_utc": "2026-10-01T07:45:41.670595+00:00",
+  "input_file": "results/raw/masakhaner2_metrics.csv",
+  "input_sha256": "00e6535193fc9bc77b791e4b4ac2f523bdbdad1f5d9d6bd2909a56a1072465cf",
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20260930,
+    "resampling_unit": "aligned split/sentence_id within language",
+    "interval": "percentile 95%"
+  },
+  "test": {
+    "name": "Wilcoxon signed-rank",
+    "paired_measure": "sentence token count",
+    "alternative": "two-sided",
+    "zero_method": "zsplit",
+    "multiple_comparison_adjustment": "Holm, three languages"
+  },
+  "output_csv": "results/masakhaner2/paired_comparison.csv",
+  "output_csv_sha256": "5b47b5e5e4bf2b34f82b70939f4d0f7869a1c72c138fca4c646f76fbf7c87390",
+  "output_markdown": "results/masakhaner2/PAIRED_RESULTS.md",
+  "output_markdown_sha256": "4645bc21f838a8b7a56df90aad592c39bb20242ac78ced38b7c2efbc0fff3b87",
+  "limitation": "Sentence bootstrap assumes independence; source document identifiers unavailable, so within-article dependence is not modeled."
+}

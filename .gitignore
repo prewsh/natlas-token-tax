@@ -1,0 +1,11 @@
+.venv/
+.cache/
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+data/raw/
+data/processed/
+results/raw/
+# Corpus-derived word inventories and examples stay local.
+results/word_analysis/

@@ -1,0 +1,42 @@
+{
+  "experiment": "MasakhaNER 2.0 reconstructed news-text replication",
+  "run_at_utc": "2026-10-01T07:45:21.929525+00:00",
+  "input_file": "data/processed/masakhaner2.csv",
+  "input_sha256": "b673146f9201d3975d7691589c8db6d4689f716f39391b374a4c6db1a6b635ad",
+  "input_row_count": 27927,
+  "tokenizers": {
+    "natlas": {
+      "model_id": "NCAIR1/N-ATLaS",
+      "revision": "e294476928aca9030e924ca27bb8e085e8581273"
+    },
+    "llama3": {
+      "model_id": "meta-llama/Meta-Llama-3-8B",
+      "revision": "8cde5ca8380496c9a6cc7ef3a8b46a0372a1d920"
+    },
+    "gemma4": {
+      "model_id": "google/gemma-4-12B",
+      "revision": "023679ed352de9bb66cc873c9009ce3482585c08"
+    }
+  },
+  "settings": {
+    "add_special_tokens": false,
+    "word_definition": "maximal non-whitespace sequence (regex \\S+)",
+    "fragmentation_method": "count tokenizer offset spans overlapping each whitespace word"
+  },
+  "output_file": "results/raw/masakhaner2_metrics.csv",
+  "output_sha256": "00e6535193fc9bc77b791e4b4ac2f523bdbdad1f5d9d6bd2909a56a1072465cf",
+  "output_row_count": 83781,
+  "row_count_by_tokenizer_and_language": {
+    "natlas:hau": 7913,
+    "natlas:ibo": 10381,
+    "natlas:yor": 9633,
+    "llama3:hau": 7913,
+    "llama3:ibo": 10381,
+    "llama3:yor": 9633,
+    "gemma4:hau": 7913,
+    "gemma4:ibo": 10381,
+    "gemma4:yor": 9633
+  },
+  "natlas_llama_token_id_mismatch_count": 0,
+  "natlas_llama_mismatch_examples": []
+}

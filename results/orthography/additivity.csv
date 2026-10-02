@@ -1,0 +1,5 @@
+language,tokenizer,tone_savings,underdot_savings,all_Mn_savings,tone_and_underdot_savings,interaction_savings,additional_other_mark_savings,all_minus_sum_savings,sentences_nonadditive
+Igbo,gemma4,240,14965,15228,15207,2,21,23,40
+Igbo,natlas_llama,308,17936,18274,18247,3,27,30,29
+Yoruba,gemma4,31775,14380,41786,41740,-4415,46,-4369,1440
+Yoruba,natlas_llama,36921,20279,52526,52474,-4726,52,-4674,1473

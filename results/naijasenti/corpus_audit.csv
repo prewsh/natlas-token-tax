@@ -1,0 +1,4 @@
+language,unique_tweets,whitespace_units,exact_duplicates_removed,empty_rows_removed,tweets_with_mentions,tweets_with_urls,tweets_with_diacritics,tweets_with_hashtags
+Hausa,21937,298517,215,0,16626,501,122,377
+Igbo,15677,185661,38,0,8211,3032,4219,1237
+Yoruba,14890,316888,237,0,4566,2187,11739,5867

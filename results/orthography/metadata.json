@@ -1,0 +1,49 @@
+{
+  "run_at_utc": "2026-10-01T09:31:45.184449+00:00",
+  "input": "data/processed/flores_plus_four_languages.csv",
+  "input_sha256": "3be0e3183b9708b3fa2d39f838de5b498d75994f148344e0824c088a32cc2103",
+  "tokenizers": {
+    "natlas_llama": {
+      "model_id": "NCAIR1/N-ATLaS",
+      "revision": "e294476928aca9030e924ca27bb8e085e8581273"
+    },
+    "gemma4": {
+      "model_id": "google/gemma-4-12B",
+      "revision": "023679ed352de9bb66cc873c9009ce3482585c08"
+    }
+  },
+  "reference": "NFC",
+  "bootstrap_replicates": 10000,
+  "seed": 20261001,
+  "transformations": {
+    "tones": [
+      "U+0300",
+      "U+0301",
+      "U+0304"
+    ],
+    "underdot": [
+      "U+0323"
+    ],
+    "additional_under_mark": [
+      "U+0329"
+    ],
+    "hooks": "ƙɗɓƴ and uppercase to kdby"
+  },
+  "raw_sha256": "e17b3963ba7e5002d8a481690082191eeeb77f2abc2eacdd4e6595c2d4d32a4b",
+  "output_hashes": {
+    "results/orthography/orthography_effects.png": "9532f31b99daf81c7688d66e14c5d37ccebcf9c99289b0164d44756484bdddda",
+    "results/orthography/mark_inventory.csv": "417a09e9375b00abc28f7be677139e4221f75f76bbf68b74590df88dd0374299",
+    "results/orthography/orthography_effects.svg": "f9c0a28873576659a1c333a100e13d7dff01d77f31cee88d8d0d20b3891074a7",
+    "results/orthography/ORTHOGRAPHY_RESULTS.md": "f5d993be72d989ca630599c96f41f59e98f01e352c2346ac37bbcb0d31899b55",
+    "results/orthography/vocabulary_audit.csv": "be56c79b78b263b3bac767b702b5acd20bf3317c2cdc2a7902fa93e92ac0b115",
+    "results/orthography/additivity.csv": "e85f2ba8c74d1907a172920fb7e99462d21a9b8de4bc9549a8d4a924448f1a14",
+    "results/orthography/orthography_summary.csv": "3537b1b75169d10280ca2a5310f3bb7725e7a07db3c1e72c983a4a03e05b1b60",
+    "results/orthography/normalization_audit.csv": "807c981a6c3f4203d09da0fcc8df88a7c62a78de554d6d6748a447279151a1f1"
+  },
+  "supporting_statistics": {
+    "test": "two-sided Wilcoxon, zsplit, approximate",
+    "holm_family": "all 34 non-NFC condition/language/tokenizer rows, including published and auxiliary conditions",
+    "updated": "2026-10-02",
+    "source": "saved paired token counts; no retokenization"
+  }
+}

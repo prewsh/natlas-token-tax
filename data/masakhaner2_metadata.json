@@ -1,0 +1,59 @@
+{
+  "prepared_at_utc": "2026-10-01T07:45:40.390010+00:00",
+  "huggingface_repository": "masakhane/masakhaner2",
+  "huggingface_loader_revision": "60512e89e68841b6b5ed1be59caf97b169f0d27a",
+  "source_repository": "https://github.com/masakhane-io/masakhane-ner",
+  "source_revision": "ba5843cd08aa491d5f96a5e809e71eb9ec461391",
+  "license_working_basis": "CC BY-NC 4.0 per original repository README; HF AFL-3.0 header conflicts",
+  "source_hashes": {
+    "data/raw/masakhaner2/hau_train.txt": "54c537b644f246b1d1fca61318151f1e01bcd1039ac3df328aed520934bc6d0f",
+    "data/raw/masakhaner2/hau_dev.txt": "1eee64451c25a3c96ae7fd780446ba5b29bf4eaca1b70d1d2c4ebc9571a70951",
+    "data/raw/masakhaner2/hau_test.txt": "64c27e3e9ce2d47ee12e6e21ae2047cdc320ef9c65baec7d1f331189a881a234",
+    "data/raw/masakhaner2/ibo_train.txt": "1bc7d541bb8c66e86c00f48c15f9edf477c3f2e8696299d81f2c4126a8853dc9",
+    "data/raw/masakhaner2/ibo_dev.txt": "75cdebb3d04f4300ac1368e4f72a4e2027e586c31db53771a8da548ce368b2ac",
+    "data/raw/masakhaner2/ibo_test.txt": "149eb6edd255b35e204764c868949ac263edb06bd190ec000f24168d3d5f4c7d",
+    "data/raw/masakhaner2/yor_train.txt": "0be68a94d2433677d08c9895f29cd246dff5c199f0e80face6db69f8fccbc94d",
+    "data/raw/masakhaner2/yor_dev.txt": "7b14a2a6abede574ab0abcbb59f06ba6fbf20629fa86dc660f9fec9a6dfa9441",
+    "data/raw/masakhaner2/yor_test.txt": "08a4b4cffa1ac1d80217cb371f6bacd13deaeed6c0fa43af5e69f13c42bc6ccd"
+  },
+  "source_sentence_counts": {
+    "hau:train": 5716,
+    "hau:dev": 816,
+    "hau:test": 1633,
+    "ibo:train": 7634,
+    "ibo:dev": 1090,
+    "ibo:test": 2181,
+    "yor:train": 6876,
+    "yor:dev": 983,
+    "yor:test": 1964
+  },
+  "reconstruction": "Join published CoNLL tokens with one ASCII space; punctuation retains separate spacing; no spelling/diacritics changes",
+  "deduplication": "Exact reconstructed-text duplicates within each language across splits; retain first",
+  "input_sha256": "b673146f9201d3975d7691589c8db6d4689f716f39391b374a4c6db1a6b635ad",
+  "audit": [
+    {
+      "language": "Hausa",
+      "sentences": 7913,
+      "whitespace_units_including_punctuation": 213251,
+      "lexical_units_containing_letters": 194106,
+      "sentences_with_combining_marks_after_NFD": 0,
+      "exact_duplicate_sentences_removed": 252
+    },
+    {
+      "language": "Igbo",
+      "sentences": 10381,
+      "whitespace_units_including_punctuation": 328931,
+      "lexical_units_containing_letters": 286732,
+      "sentences_with_combining_marks_after_NFD": 10201,
+      "exact_duplicate_sentences_removed": 524
+    },
+    {
+      "language": "Yoruba",
+      "sentences": 9633,
+      "whitespace_units_including_punctuation": 241807,
+      "lexical_units_containing_letters": 213256,
+      "sentences_with_combining_marks_after_NFD": 9597,
+      "exact_duplicate_sentences_removed": 190
+    }
+  ]
+}

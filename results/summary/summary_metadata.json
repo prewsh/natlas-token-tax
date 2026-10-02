@@ -1,0 +1,17 @@
+{
+  "analysis": "FLORES+ baseline descriptive summary",
+  "run_at_utc": "2026-09-30T15:02:35.387055+00:00",
+  "input_file": "results/raw/tokenization_metrics.csv",
+  "input_sha256": "ae76c1bc47e450220f8f8ce4c28a43f2bec95cc65ba363f9e5a79d9021220fc9",
+  "input_row_count": 24108,
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20260930,
+    "resampling_unit": "aligned split/sentence_id",
+    "interval": "percentile 95%"
+  },
+  "output_csv": "results/summary/tokenizer_language_summary.csv",
+  "output_csv_sha256": "9f9a99de2ea02d79c9a710e6123849f882937257402af8fc1140c49ff2d7f55d",
+  "output_markdown": "results/summary/BASELINE_RESULTS.md",
+  "output_markdown_sha256": "c2724b1918266f267104cd35f566c4971c1df7fd61c8459509067d20c94a0564"
+}

@@ -1,0 +1,14 @@
+{
+  "run_at_utc": "2026-10-01T07:45:42.148176+00:00",
+  "outputs": {
+    "results/masakhaner2/summary.csv": "838ce12de7ae40d7ebc35d1a659f59e04843dc6e2ee2014fabaaed41060e269e",
+    "results/masakhaner2/paired_metadata.json": "f61bd21fce09643daf99ae484abacf8c756274a0e29f4bb9ae3bee44bf431750",
+    "results/masakhaner2/PAIRED_RESULTS.md": "4645bc21f838a8b7a56df90aad592c39bb20242ac78ced38b7c2efbc0fff3b87",
+    "results/masakhaner2/RESULTS.md": "57d417f8cdb1ba5118e861ca0e704602c3070aec450fe42b6849361b47bae4c6",
+    "results/masakhaner2/cross_corpus_comparison.svg": "00a4fe19aede6282faf3ec73ca4552ffbfdea79244d336edace572f0713437b0",
+    "results/masakhaner2/paired_comparison.csv": "5b47b5e5e4bf2b34f82b70939f4d0f7869a1c72c138fca4c646f76fbf7c87390",
+    "results/masakhaner2/cross_corpus_comparison.png": "4741d32d5f3d7768d104310b1255ca919c51c40dcb869bd9efdef73a0bf855a2",
+    "results/masakhaner2/tokenization_metadata.json": "7a822ce6b1906a591f507baf3427d86015c95e2a47dc72cec5afa48c81532b04",
+    "results/masakhaner2/corpus_audit.csv": "3d090d88d149838b8df9467eda6eafa985fdafc67957622b94eb4e4b318cfb5d"
+  }
+}

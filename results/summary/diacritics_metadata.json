@@ -1,0 +1,27 @@
+{
+  "experiment": "Controlled Igbo and Yoruba diacritics stripping",
+  "run_at_utc": "2026-09-30T15:57:25.329462+00:00",
+  "input_file": "data/processed/flores_plus_four_languages.csv",
+  "input_sha256": "3be0e3183b9708b3fa2d39f838de5b498d75994f148344e0824c088a32cc2103",
+  "transformation": "NFD decomposition; remove characters with Unicode category Mn; NFC recomposition",
+  "tokenizers": {
+    "natlas_llama": {
+      "model_id": "NCAIR1/N-ATLaS",
+      "revision": "e294476928aca9030e924ca27bb8e085e8581273"
+    },
+    "gemma4": {
+      "model_id": "google/gemma-4-12B",
+      "revision": "023679ed352de9bb66cc873c9009ce3482585c08"
+    }
+  },
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20260930,
+    "resampling_unit": "paired split/sentence_id within language"
+  },
+  "multiple_comparison_adjustment": "Holm, four comparisons",
+  "raw_output": "results/raw/diacritics_metrics.csv",
+  "raw_output_sha256": "9541373fa62486a6ee5b9d99ea853422f8d9248fc476e75b0ffd0be5e153ce97",
+  "summary_output": "results/summary/diacritics_summary.csv",
+  "summary_output_sha256": "2139d125ad5c633d258903ba6b46c27d71f250a5183081c1838d967a07c4ada8"
+}

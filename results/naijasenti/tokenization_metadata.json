@@ -1,0 +1,42 @@
+{
+  "experiment": "NaijaSenti published social-media tokenizer replication",
+  "run_at_utc": "2026-10-01T08:11:45.678224+00:00",
+  "input_file": "data/processed/naijasenti.csv",
+  "input_sha256": "856b6eeb68301d6199af05ef62461495ec9c21b0e7661029035eaa05da12517c",
+  "input_row_count": 52504,
+  "tokenizers": {
+    "natlas": {
+      "model_id": "NCAIR1/N-ATLaS",
+      "revision": "e294476928aca9030e924ca27bb8e085e8581273"
+    },
+    "llama3": {
+      "model_id": "meta-llama/Meta-Llama-3-8B",
+      "revision": "8cde5ca8380496c9a6cc7ef3a8b46a0372a1d920"
+    },
+    "gemma4": {
+      "model_id": "google/gemma-4-12B",
+      "revision": "023679ed352de9bb66cc873c9009ce3482585c08"
+    }
+  },
+  "settings": {
+    "add_special_tokens": false,
+    "word_definition": "maximal non-whitespace sequence (regex \\S+)",
+    "fragmentation_method": "count tokenizer offset spans overlapping each whitespace word"
+  },
+  "output_file": "results/raw/naijasenti_metrics.csv",
+  "output_sha256": "31294e23bbbb981288713436124be79f7257d92f83fc4eaae76f4eb3927a78e1",
+  "output_row_count": 157512,
+  "row_count_by_tokenizer_and_language": {
+    "natlas:hau": 21937,
+    "natlas:ibo": 15677,
+    "natlas:yor": 14890,
+    "llama3:hau": 21937,
+    "llama3:ibo": 15677,
+    "llama3:yor": 14890,
+    "gemma4:hau": 21937,
+    "gemma4:ibo": 15677,
+    "gemma4:yor": 14890
+  },
+  "natlas_llama_token_id_mismatch_count": 0,
+  "natlas_llama_mismatch_examples": []
+}

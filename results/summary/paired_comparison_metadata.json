@@ -1,0 +1,23 @@
+{
+  "analysis": "Paired N-ATLaS versus Gemma 4 comparison",
+  "run_at_utc": "2026-09-30T15:45:42.662226+00:00",
+  "input_file": "results/raw/tokenization_metrics.csv",
+  "input_sha256": "ae76c1bc47e450220f8f8ce4c28a43f2bec95cc65ba363f9e5a79d9021220fc9",
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20260930,
+    "resampling_unit": "aligned split/sentence_id within language",
+    "interval": "percentile 95%"
+  },
+  "test": {
+    "name": "Wilcoxon signed-rank",
+    "paired_measure": "sentence token count",
+    "alternative": "two-sided",
+    "zero_method": "zsplit",
+    "multiple_comparison_adjustment": "Holm, four languages"
+  },
+  "output_csv": "results/summary/natlas_gemma_paired_comparison.csv",
+  "output_csv_sha256": "f5dbbbebb9aaac297ac4a6cbf43921739ee291e407d464d353175b1148564059",
+  "output_markdown": "results/summary/NATLAS_GEMMA_PAIRED.md",
+  "output_markdown_sha256": "0e249fc9a6534d3ff27f86de9a1d59d37ed62f9ec4d2bbf14ae83bc34fbbc02d"
+}

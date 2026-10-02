@@ -1,0 +1,22 @@
+{
+  "checks": [
+    {
+      "model_id": "meta-llama/Llama-3.1-8B",
+      "revision": "d04e592bb4f6aa9cfee91e2e20afa771667e1d4b",
+      "date": "2026-10-02",
+      "status": "pending_access",
+      "failure": "HTTP 403 GatedRepoError on tokenizer_config.json",
+      "comparison_completed": false,
+      "reproduction_command": "python src/compare_tokenizers.py --llama-model meta-llama/Llama-3.1-8B --llama-revision d04e592bb4f6aa9cfee91e2e20afa771667e1d4b --output results/tokenizer_identity_llama31.json"
+    },
+    {
+      "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+      "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+      "date": "2026-10-02",
+      "status": "pending_access",
+      "failure": "HTTP 403 GatedRepoError on tokenizer_config.json",
+      "comparison_completed": false,
+      "reproduction_command": "python src/compare_tokenizers.py --llama-model meta-llama/Llama-3.1-8B-Instruct --llama-revision 0e9e39f249a16976918f6564b8830bc894c89659 --output results/tokenizer_identity_llama31_instruct.json"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "analysis": "Paired N-ATLaS versus Gemma 4 comparison",
+  "run_at_utc": "2026-10-01T08:12:37.958667+00:00",
+  "input_file": "results/raw/naijasenti_metrics.csv",
+  "input_sha256": "31294e23bbbb981288713436124be79f7257d92f83fc4eaae76f4eb3927a78e1",
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20260930,
+    "resampling_unit": "tweet within language; independence assumed, user/thread identifiers unavailable",
+    "interval": "percentile 95%"
+  },
+  "test": {
+    "name": "Wilcoxon signed-rank",
+    "paired_measure": "sentence token count",
+    "alternative": "two-sided",
+    "zero_method": "zsplit",
+    "multiple_comparison_adjustment": "Holm, three languages"
+  },
+  "output_csv": "results/naijasenti/paired_comparison.csv",
+  "output_csv_sha256": "3525ef7f1690e9d3717796b17a94ed2bdb2f88d31e0e3c9bb0c6cf46fe06b338",
+  "output_markdown": "results/naijasenti/PAIRED_RESULTS.md",
+  "output_markdown_sha256": "84fff60a6305511be14634cd6ba9681a87b191ca708413e6b826c297472bf8ae"
+}

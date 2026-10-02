@@ -1,0 +1,39 @@
+{
+  "dataset_id": "openlanguagedata/flores_plus",
+  "dataset_release_from_card": "4.6",
+  "dataset_revision": "5fec6c13f9e5a4db2f745d4ec0d7c9721ddc4f06",
+  "retrieved_at_utc": "2026-09-30T14:23:43.719504+00:00",
+  "license": "CC-BY-SA-4.0",
+  "splits": [
+    "dev",
+    "devtest"
+  ],
+  "target_languages": {
+    "eng": "English",
+    "hau": "Hausa",
+    "ibo": "Igbo",
+    "yor": "Yoruba"
+  },
+  "target_script": "Latn",
+  "row_count": 8036,
+  "aligned_sentence_count_by_split": {
+    "dev": 997,
+    "devtest": 1012
+  },
+  "row_count_by_split_and_language": {
+    "dev:eng": 997,
+    "dev:hau": 997,
+    "dev:ibo": 997,
+    "dev:yor": 997,
+    "devtest:eng": 1012,
+    "devtest:hau": 1012,
+    "devtest:ibo": 1012,
+    "devtest:yor": 1012
+  },
+  "validation": {
+    "one_row_per_split_sentence_language": true,
+    "all_sentence_ids_have_all_target_languages": true
+  },
+  "processed_file": "data/processed/flores_plus_four_languages.csv",
+  "processed_file_sha256": "3be0e3183b9708b3fa2d39f838de5b498d75994f148344e0824c088a32cc2103"
+}

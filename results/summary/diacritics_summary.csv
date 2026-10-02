@@ -1,0 +1,5 @@
+tokenizer,language_code,language,sentence_count,sentences_text_changed,original_total_tokens,stripped_total_tokens,total_token_reduction,relative_token_reduction,reduction_ci95_low,reduction_ci95_high,sentences_stripping_reduced_tokens,sentences_equal_tokens,sentences_stripping_increased_tokens,wilcoxon_statistic,wilcoxon_p_raw,wilcoxon_p_holm
+natlas_llama,ibo,Igbo,2009,1810,125755,107448,18307,0.14557671663154548,0.14232380637474706,0.1489368572293089,1797,212,0,11289.0,0.0,0.0
+natlas_llama,yor,Yoruba,2009,1705,143881,89883,53998,0.37529625176361026,0.3695688309525676,0.38090538387179307,1705,304,0,23180.0,0.0,0.0
+gemma4,ibo,Igbo,2009,1810,113472,98171,15301,0.13484383812746759,0.13173260333964332,0.13781395870497876,1794,215,0,11610.0,0.0,0.0
+gemma4,yor,Yoruba,2009,1705,127295,83825,43470,0.3414902392081386,0.33589559914080735,0.3469878236564735,1702,306,1,23802.5,0.0,0.0

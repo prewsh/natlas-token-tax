@@ -1,0 +1,4 @@
+language,sentences,whitespace_units_including_punctuation,lexical_units_containing_letters,sentences_with_combining_marks_after_NFD,exact_duplicate_sentences_removed
+Hausa,7913,213251,194106,0,252
+Igbo,10381,328931,286732,10201,524
+Yoruba,9633,241807,213256,9597,190

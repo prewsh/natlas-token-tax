@@ -1,0 +1,45 @@
+{
+  "experiment": "FLORES+ four-language tokenizer efficiency baseline",
+  "run_at_utc": "2026-09-30T14:46:10.309983+00:00",
+  "input_file": "data/processed/flores_plus_four_languages.csv",
+  "input_sha256": "3be0e3183b9708b3fa2d39f838de5b498d75994f148344e0824c088a32cc2103",
+  "input_row_count": 8036,
+  "tokenizers": {
+    "natlas": {
+      "model_id": "NCAIR1/N-ATLaS",
+      "revision": "e294476928aca9030e924ca27bb8e085e8581273"
+    },
+    "llama3": {
+      "model_id": "meta-llama/Meta-Llama-3-8B",
+      "revision": "8cde5ca8380496c9a6cc7ef3a8b46a0372a1d920"
+    },
+    "gemma4": {
+      "model_id": "google/gemma-4-12B",
+      "revision": "023679ed352de9bb66cc873c9009ce3482585c08"
+    }
+  },
+  "settings": {
+    "add_special_tokens": false,
+    "word_definition": "maximal non-whitespace sequence (regex \\S+)",
+    "fragmentation_method": "count tokenizer offset spans overlapping each whitespace word"
+  },
+  "output_file": "results/raw/tokenization_metrics.csv",
+  "output_sha256": "ae76c1bc47e450220f8f8ce4c28a43f2bec95cc65ba363f9e5a79d9021220fc9",
+  "output_row_count": 24108,
+  "row_count_by_tokenizer_and_language": {
+    "natlas:eng": 2009,
+    "natlas:hau": 2009,
+    "natlas:ibo": 2009,
+    "natlas:yor": 2009,
+    "llama3:eng": 2009,
+    "llama3:hau": 2009,
+    "llama3:ibo": 2009,
+    "llama3:yor": 2009,
+    "gemma4:eng": 2009,
+    "gemma4:hau": 2009,
+    "gemma4:ibo": 2009,
+    "gemma4:yor": 2009
+  },
+  "natlas_llama_token_id_mismatch_count": 0,
+  "natlas_llama_mismatch_examples": []
+}
