@@ -1,0 +1,598 @@
+{
+  "tokenizers": {
+    "natlas": {
+      "model_id": "NCAIR1/N-ATLaS",
+      "revision": "e294476928aca9030e924ca27bb8e085e8581273"
+    },
+    "gemma": {
+      "model_id": "google/gemma-4-12B",
+      "revision": "023679ed352de9bb66cc873c9009ce3482585c08"
+    }
+  },
+  "normalization": "NFC",
+  "input": "Standalone word, with no leading or trailing space",
+  "add_special_tokens": false,
+  "characters": "Unicode code points after NFC, not grapheme clusters",
+  "selection": "Illustrative words from recorded FLORES+ analysis: frequent short, two marked/hooked, and long per language; four common English words spanning comparable lengths. Selection is not a statistical sample or translation matching.",
+  "piece_display": "Decode each ByteLevel token's bytes as UTF-8; preserve incomplete UTF-8 bytes as backslash xNN escapes. Joining bytes reproduces the NFC input exactly. Ordinary single-token decoding may instead return replacement characters.",
+  "inventory_sha256": "93cdda09a1649383e08a2fd610c0c25ac458a837db51c4b4751a94b6f79822a3",
+  "examples": [
+    {
+      "word": "da",
+      "language": "Hausa",
+      "category": "frequent short",
+      "characters_NFC_codepoints": 2,
+      "N_ATLaS_tokens": 1,
+      "Gemma_4_tokens": 1,
+      "N_ATLaS_decoded_pieces": "[\"da\"]",
+      "FLORES_word_analysis_occurrences": 3795,
+      "token_ids": {
+        "natlas": [
+          3315
+        ],
+        "gemma": [
+          1926
+        ]
+      },
+      "N_ATLaS_internal_token_strings": [
+        "da"
+      ],
+      "N_ATLaS_piece_bytes_hex": [
+        "6461"
+      ],
+      "N_ATLaS_individually_decoded_with_replacement": [
+        "da"
+      ]
+    },
+    {
+      "word": "ƙasa",
+      "language": "Hausa",
+      "category": "hooked letter",
+      "characters_NFC_codepoints": 4,
+      "N_ATLaS_tokens": 3,
+      "Gemma_4_tokens": 2,
+      "N_ATLaS_decoded_pieces": "[\"\\\\xc6\", \"\\\\x99\", \"asa\"]",
+      "FLORES_word_analysis_occurrences": 110,
+      "token_ids": {
+        "natlas": [
+          130,
+          247,
+          15790
+        ],
+        "gemma": [
+          242013,
+          6734
+        ]
+      },
+      "N_ATLaS_internal_token_strings": [
+        "Æ",
+        "Ļ",
+        "asa"
+      ],
+      "N_ATLaS_piece_bytes_hex": [
+        "c6",
+        "99",
+        "617361"
+      ],
+      "N_ATLaS_individually_decoded_with_replacement": [
+        "�",
+        "�",
+        "asa"
+      ]
+    },
+    {
+      "word": "ɗaya",
+      "language": "Hausa",
+      "category": "hooked letter",
+      "characters_NFC_codepoints": 4,
+      "N_ATLaS_tokens": 3,
+      "Gemma_4_tokens": 2,
+      "N_ATLaS_decoded_pieces": "[\"\\\\xc9\", \"\\\\x97\", \"aya\"]",
+      "FLORES_word_analysis_occurrences": 76,
+      "token_ids": {
+        "natlas": [
+          133,
+          245,
+          12874
+        ],
+        "gemma": [
+          242651,
+          4451
+        ]
+      },
+      "N_ATLaS_internal_token_strings": [
+        "É",
+        "Ĺ",
+        "aya"
+      ],
+      "N_ATLaS_piece_bytes_hex": [
+        "c9",
+        "97",
+        "617961"
+      ],
+      "N_ATLaS_individually_decoded_with_replacement": [
+        "�",
+        "�",
+        "aya"
+      ]
+    },
+    {
+      "word": "muhimmanci",
+      "language": "Hausa",
+      "category": "long",
+      "characters_NFC_codepoints": 10,
+      "N_ATLaS_tokens": 5,
+      "Gemma_4_tokens": 4,
+      "N_ATLaS_decoded_pieces": "[\"m\", \"uh\", \"imm\", \"anc\", \"i\"]",
+      "FLORES_word_analysis_occurrences": 17,
+      "token_ids": {
+        "natlas": [
+          76,
+          12825,
+          12828,
+          1149,
+          72
+        ],
+        "gemma": [
+          2753,
+          236754,
+          9411,
+          49071
+        ]
+      },
+      "N_ATLaS_internal_token_strings": [
+        "m",
+        "uh",
+        "imm",
+        "anc",
+        "i"
+      ],
+      "N_ATLaS_piece_bytes_hex": [
+        "6d",
+        "7568",
+        "696d6d",
+        "616e63",
+        "69"
+      ],
+      "N_ATLaS_individually_decoded_with_replacement": [
+        "m",
+        "uh",
+        "imm",
+        "anc",
+        "i"
+      ]
+    },
+    {
+      "word": "na",
+      "language": "Igbo",
+      "category": "frequent short",
+      "characters_NFC_codepoints": 2,
+      "N_ATLaS_tokens": 1,
+      "Gemma_4_tokens": 1,
+      "N_ATLaS_decoded_pieces": "[\"na\"]",
+      "FLORES_word_analysis_occurrences": 2552,
+      "token_ids": {
+        "natlas": [
+          3458
+        ],
+        "gemma": [
+          1789
+        ]
+      },
+      "N_ATLaS_internal_token_strings": [
+        "na"
+      ],
+      "N_ATLaS_piece_bytes_hex": [
+        "6e61"
+      ],
+      "N_ATLaS_individually_decoded_with_replacement": [
+        "na"
+      ]
+    },
+    {
+      "word": "ndị",
+      "language": "Igbo",
+      "category": "marked letter",
+      "characters_NFC_codepoints": 3,
+      "N_ATLaS_tokens": 2,
+      "Gemma_4_tokens": 2,
+      "N_ATLaS_decoded_pieces": "[\"nd\", \"ị\"]",
+      "FLORES_word_analysis_occurrences": 1217,
+      "token_ids": {
+        "natlas": [
+          303,
+          37028
+        ],
+        "gemma": [
+          523,
+          237511
+        ]
+      },
+      "N_ATLaS_internal_token_strings": [
+        "nd",
+        "á»ĭ"
+      ],
+      "N_ATLaS_piece_bytes_hex": [
+        "6e64",
+        "e1bb8b"
+      ],
+      "N_ATLaS_individually_decoded_with_replacement": [
+        "nd",
+        "ị"
+      ]
+    },
+    {
+      "word": "ahụ",
+      "language": "Igbo",
+      "category": "marked letter",
+      "characters_NFC_codepoints": 3,
+      "N_ATLaS_tokens": 2,
+      "Gemma_4_tokens": 2,
+      "N_ATLaS_decoded_pieces": "[\"ah\", \"ụ\"]",
+      "FLORES_word_analysis_occurrences": 693,
+      "token_ids": {
+        "natlas": [
+          1494,
+          51583
+        ],
+        "gemma": [
+          957,
+          237701
+        ]
+      },
+      "N_ATLaS_internal_token_strings": [
+        "ah",
+        "á»¥"
+      ],
+      "N_ATLaS_piece_bytes_hex": [
+        "6168",
+        "e1bba5"
+      ],
+      "N_ATLaS_individually_decoded_with_replacement": [
+        "ah",
+        "ụ"
+      ]
+    },
+    {
+      "word": "gburugburu",
+      "language": "Igbo",
+      "category": "long",
+      "characters_NFC_codepoints": 10,
+      "N_ATLaS_tokens": 5,
+      "Gemma_4_tokens": 4,
+      "N_ATLaS_decoded_pieces": "[\"gb\", \"ur\", \"ug\", \"bur\", \"u\"]",
+      "FLORES_word_analysis_occurrences": 59,
+      "token_ids": {
+        "natlas": [
+          9701,
+          324,
+          773,
+          11490,
+          84
+        ],
+        "gemma": [
+          236759,
+          7400,
+          1112,
+          191108
+        ]
+      },
+      "N_ATLaS_internal_token_strings": [
+        "gb",
+        "ur",
+        "ug",
+        "bur",
+        "u"
+      ],
+      "N_ATLaS_piece_bytes_hex": [
+        "6762",
+        "7572",
+        "7567",
+        "627572",
+        "75"
+      ],
+      "N_ATLaS_individually_decoded_with_replacement": [
+        "gb",
+        "ur",
+        "ug",
+        "bur",
+        "u"
+      ]
+    },
+    {
+      "word": "ní",
+      "language": "Yoruba",
+      "category": "frequent short",
+      "characters_NFC_codepoints": 2,
+      "N_ATLaS_tokens": 1,
+      "Gemma_4_tokens": 1,
+      "N_ATLaS_decoded_pieces": "[\"ní\"]",
+      "FLORES_word_analysis_occurrences": 1286,
+      "token_ids": {
+        "natlas": [
+          55122
+        ],
+        "gemma": [
+          6465
+        ]
+      },
+      "N_ATLaS_internal_token_strings": [
+        "nÃŃ"
+      ],
+      "N_ATLaS_piece_bytes_hex": [
+        "6ec3ad"
+      ],
+      "N_ATLaS_individually_decoded_with_replacement": [
+        "ní"
+      ]
+    },
+    {
+      "word": "àwọn",
+      "language": "Yoruba",
+      "category": "marked letter",
+      "characters_NFC_codepoints": 4,
+      "N_ATLaS_tokens": 3,
+      "Gemma_4_tokens": 3,
+      "N_ATLaS_decoded_pieces": "[\"à\", \"w\", \"ọn\"]",
+      "FLORES_word_analysis_occurrences": 1313,
+      "token_ids": {
+        "natlas": [
+          6496,
+          86,
+          80923
+        ],
+        "gemma": [
+          236937,
+          236765,
+          18856
+        ]
+      },
+      "N_ATLaS_internal_token_strings": [
+        "Ãł",
+        "w",
+        "á»įn"
+      ],
+      "N_ATLaS_piece_bytes_hex": [
+        "c3a0",
+        "77",
+        "e1bb8d6e"
+      ],
+      "N_ATLaS_individually_decoded_with_replacement": [
+        "à",
+        "w",
+        "ọn"
+      ]
+    },
+    {
+      "word": "wọ́n",
+      "language": "Yoruba",
+      "category": "marked letter and tone",
+      "characters_NFC_codepoints": 4,
+      "N_ATLaS_tokens": 4,
+      "Gemma_4_tokens": 3,
+      "N_ATLaS_decoded_pieces": "[\"w\", \"ọ\", \"́\", \"n\"]",
+      "FLORES_word_analysis_occurrences": 533,
+      "token_ids": {
+        "natlas": [
+          86,
+          42703,
+          54939,
+          77
+        ],
+        "gemma": [
+          236765,
+          237550,
+          80456
+        ]
+      },
+      "N_ATLaS_internal_token_strings": [
+        "w",
+        "á»į",
+        "Ìģ",
+        "n"
+      ],
+      "N_ATLaS_piece_bytes_hex": [
+        "77",
+        "e1bb8d",
+        "cc81",
+        "6e"
+      ],
+      "N_ATLaS_individually_decoded_with_replacement": [
+        "w",
+        "ọ",
+        "́",
+        "n"
+      ]
+    },
+    {
+      "word": "lọ́wọ́lọ́wọ́",
+      "language": "Yoruba",
+      "category": "long",
+      "characters_NFC_codepoints": 12,
+      "N_ATLaS_tokens": 12,
+      "Gemma_4_tokens": 12,
+      "N_ATLaS_decoded_pieces": "[\"l\", \"ọ\", \"́\", \"w\", \"ọ\", \"́\", \"l\", \"ọ\", \"́\", \"w\", \"ọ\", \"́\"]",
+      "FLORES_word_analysis_occurrences": 6,
+      "token_ids": {
+        "natlas": [
+          75,
+          42703,
+          54939,
+          86,
+          42703,
+          54939,
+          75,
+          42703,
+          54939,
+          86,
+          42703,
+          54939
+        ],
+        "gemma": [
+          236752,
+          237550,
+          238288,
+          236765,
+          237550,
+          238288,
+          236752,
+          237550,
+          238288,
+          236765,
+          237550,
+          238288
+        ]
+      },
+      "N_ATLaS_internal_token_strings": [
+        "l",
+        "á»į",
+        "Ìģ",
+        "w",
+        "á»į",
+        "Ìģ",
+        "l",
+        "á»į",
+        "Ìģ",
+        "w",
+        "á»į",
+        "Ìģ"
+      ],
+      "N_ATLaS_piece_bytes_hex": [
+        "6c",
+        "e1bb8d",
+        "cc81",
+        "77",
+        "e1bb8d",
+        "cc81",
+        "6c",
+        "e1bb8d",
+        "cc81",
+        "77",
+        "e1bb8d",
+        "cc81"
+      ],
+      "N_ATLaS_individually_decoded_with_replacement": [
+        "l",
+        "ọ",
+        "́",
+        "w",
+        "ọ",
+        "́",
+        "l",
+        "ọ",
+        "́",
+        "w",
+        "ọ",
+        "́"
+      ]
+    },
+    {
+      "word": "in",
+      "language": "English",
+      "category": "short comparison",
+      "characters_NFC_codepoints": 2,
+      "N_ATLaS_tokens": 1,
+      "Gemma_4_tokens": 1,
+      "N_ATLaS_decoded_pieces": "[\"in\"]",
+      "FLORES_word_analysis_occurrences": "",
+      "token_ids": {
+        "natlas": [
+          258
+        ],
+        "gemma": [
+          495
+        ]
+      },
+      "N_ATLaS_internal_token_strings": [
+        "in"
+      ],
+      "N_ATLaS_piece_bytes_hex": [
+        "696e"
+      ],
+      "N_ATLaS_individually_decoded_with_replacement": [
+        "in"
+      ]
+    },
+    {
+      "word": "home",
+      "language": "English",
+      "category": "comparison",
+      "characters_NFC_codepoints": 4,
+      "N_ATLaS_tokens": 1,
+      "Gemma_4_tokens": 1,
+      "N_ATLaS_decoded_pieces": "[\"home\"]",
+      "FLORES_word_analysis_occurrences": "",
+      "token_ids": {
+        "natlas": [
+          5227
+        ],
+        "gemma": [
+          8147
+        ]
+      },
+      "N_ATLaS_internal_token_strings": [
+        "home"
+      ],
+      "N_ATLaS_piece_bytes_hex": [
+        "686f6d65"
+      ],
+      "N_ATLaS_individually_decoded_with_replacement": [
+        "home"
+      ]
+    },
+    {
+      "word": "school",
+      "language": "English",
+      "category": "comparison",
+      "characters_NFC_codepoints": 6,
+      "N_ATLaS_tokens": 1,
+      "Gemma_4_tokens": 1,
+      "N_ATLaS_decoded_pieces": "[\"school\"]",
+      "FLORES_word_analysis_occurrences": "",
+      "token_ids": {
+        "natlas": [
+          22606
+        ],
+        "gemma": [
+          13858
+        ]
+      },
+      "N_ATLaS_internal_token_strings": [
+        "school"
+      ],
+      "N_ATLaS_piece_bytes_hex": [
+        "7363686f6f6c"
+      ],
+      "N_ATLaS_individually_decoded_with_replacement": [
+        "school"
+      ]
+    },
+    {
+      "word": "information",
+      "language": "English",
+      "category": "long comparison",
+      "characters_NFC_codepoints": 11,
+      "N_ATLaS_tokens": 1,
+      "Gemma_4_tokens": 1,
+      "N_ATLaS_decoded_pieces": "[\"information\"]",
+      "FLORES_word_analysis_occurrences": "",
+      "token_ids": {
+        "natlas": [
+          26125
+        ],
+        "gemma": [
+          23245
+        ]
+      },
+      "N_ATLaS_internal_token_strings": [
+        "information"
+      ],
+      "N_ATLaS_piece_bytes_hex": [
+        "696e666f726d6174696f6e"
+      ],
+      "N_ATLaS_individually_decoded_with_replacement": [
+        "information"
+      ]
+    }
+  ]
+}
