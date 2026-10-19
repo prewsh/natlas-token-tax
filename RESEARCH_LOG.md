@@ -545,7 +545,7 @@ Evidence: `results/refinements/REFINED_RESULTS.md`, `premium_perturbations.csv`,
 - [x] Calculate exact NFC English-relative perturbation premiums and intervals.
 - [x] Calculate paired Gemma advantage under NFC versus NFD.
 - [x] Run operational UAX-29 word-boundary sensitivity.
-- [ ] Obtain access to and compare `meta-llama/Llama-3.1-8B` before attributing control-token changes to N-ATLaS.
+- [x] Compare pinned Llama 3.1 base and Instruct: completed and committed in `0a7fda9`; complete vocabulary mapping identical; special-token configuration differs.
 
 ## Evidence index
 
@@ -567,7 +567,8 @@ Evidence: `results/refinements/REFINED_RESULTS.md`, `premium_perturbations.csv`,
 | Orthography figure | `results/orthography/orthography_effects.png` | Generated |
 | Updated research summary | `RESEARCH_UPDATE.md` | Consolidated current results |
 | Premium and normalization refinements | `results/refinements/REFINED_RESULTS.md` | Generated and interpreted |
-| Llama 3.1 identity comparison | Planned `results/tokenizer_identity_llama31.json` | Pending Hugging Face access; no result yet |
+| Llama 3.1 identity comparison | `results/tokenizer_identity_llama31.json`, `results/tokenizer_identity_llama31_instruct.json` | Completed for both pinned releases; committed in `0a7fda9` |
+| Paper PDF | [paper/Precious_Ngwube_N-ATLaS_token_cost.pdf](paper/Precious_Ngwube_N-ATLaS_token_cost.pdf) | Current version |
 
 ## Paper notes
 
@@ -586,3 +587,37 @@ Ran `src/token_total_premiums.py` locally using cached pinned tokenizers on all 
 Rechecked Llama 3.1 access: Hugging Face returned HTTP 403; no identity conclusion is available. Cached pinned N-ATLaS config records max_position_embeddings=131072 and llama3 rope_scaling with factor=8.0, high_freq_factor=4.0, low_freq_factor=1.0 and original_max_position_embeddings=8192. Its chat template contains both 'Cutting Knowledge Date' and 'Environment: ipython'. These observations do not establish tokenizer identity with Llama 3.1.
 
 The evidence establishes ordinary-text lexical equivalence between N-ATLaS and the tested Llama 3 tokenizer and substantial language fertility gaps in FLORES+. Control-token differences must be described relative to that tested release; their origin remains unresolved pending Llama 3.1 access. Lossy spelling perturbations quantify how much measured excess can be eliminated, without assigning causal shares or recommending altered spelling. Gemma uses fewer tokens across three corpora, but vocabulary capacity, training data, and segmentation design remain confounded. NFC/NFD changes advantage magnitude without reversing rank and supports NFC in the tested pipeline where canonical normalization is appropriate. These findings do not establish model quality, real monetary cost, or universal language behavior.
+
+## 2026-10-04: Llama 3.1 identity resolved
+
+Both pinned base and Instruct comparisons completed. All 128,256 token-to-ID entries and canonical loaded tokenizer backend definitions are identical to N-ATLaS. All three requested source files differ in SHA-256 for both models. N-ATLaS uses the exact Llama 3.1 Instruct chat template and bos/eos assignments, adding pad=eot; base has eos=end_of_text, no pad and no chat template. All 8,036 unchanged FLORES+ texts have identical IDs with add_special_tokens=False for both comparisons. Reports: results/tokenizer_identity_llama31.json and results/tokenizer_identity_llama31_instruct.json; reproducible corpus audit: src/complete_llama31_audit.py. The earlier unresolved-origin caveat is superseded: no complete token-mapping changes relative to either tested Llama 3.1 tokenizer were observed. This establishes observed tokenizer equivalence, not training provenance or model equivalence.
+
+## 2026-10-04: Revised manuscript and Google Doc
+
+Wrote `paper/manuscript.md` from the recorded evidence and created the native Google Doc, Tokenizer Inheritance and Orthographic Token Burdens in Hausa Igbo and Yoruba (working draft, kept locally; superseded by the PDF in paper/). This is a working research draft for author review. Applied the review corrections to tokenizer identity, causal language, token-total versus fertility premiums, normalization, vocabulary-size confounds and corpus limitations. Distinguished the Yoruba joint tone/underdot reduction (52,474 tokens) from the all-mark reduction (52,526 tokens), avoiding additive shares.
+
+Generated three paper figures on NFC text from existing aggregate results using `src/make_paper_figures.py`; no corpus experiments were rerun for manuscript preparation. Included references and reproducibility appendices. Read back the native document and confirmed 27 semantic headings, 16 tables, three inline figures and 12 hyperlinks. Visually reviewed all 18 pages of its Google Docs PDF export. Document identity and delivery details are recorded in `paper/google_doc.json`. Latest research additions remain pending a public repository update, as stated in the manuscript.
+
+## 2026-10-04: Standalone NFC word-example table
+
+Ran `src/example_word_table.py` with locally cached pinned N-ATLaS and Gemma 4 tokenizers. Selected four examples per Nigerian language from the recorded FLORES+ word inventory: a frequent short word, two marked/hooked examples and one long word; added four common English length comparisons (not translations). Used standalone NFC strings, no leading/trailing space and `add_special_tokens=False`. Character counts are Unicode code points after NFC, not grapheme clusters. Short-word inventory frequencies are da: 3,795; na: 2,552; ní: 1,286 (casefold aggregates). These standalone results are separate from prior sentence-context fragmentation counts.
+
+Saved the table in `results/example_words/EXAMPLE_WORDS.md` and `standalone_NFC_words.csv` (local, not published); `metadata.json` contains full token IDs, internal token strings, exact token bytes and per-token decoded strings. The lossless display uses \xNN for incomplete UTF-8 fragments, since decoding such tokens separately with the normal decoder produces replacement characters. Token bytes reconstruct each NFC input. These are illustrative examples, not a statistically representative sample.
+
+## 2026-10-05: Short aligned sentence examples and offsets
+
+Ran `src/sentence_examples.py` on pinned N-ATLaS and Gemma 4 tokenizers for FLORES+ dev IDs 212, 245 and 610. Selection was made from English text before counting tokens: respectively 6, 11 and 9 whitespace words, without names or numerical expressions. Preserved all source wording and punctuation; only NFC normalization was applied. Recorded Unicode code-point lengths including whitespace, token counts without special tokens, per-tokenizer English-relative ratios, and exact N-ATLaS offsets, IDs and internal token strings. Repeated/overlapping character offsets are retained for byte-level splits. The full sentence artifacts are local in the Git-ignored `results/raw/sentence_examples/` directory.
+
+Recounted da (3,795), na (2,552) and ní (1,286) using the existing lexical-word regex on all 2,009 FLORES+ sentences for each language (997 dev + 1,012 devtest), followed by NFC surface normalization and casefold aggregation. These are word occurrences, not sentence counts; MasakhaNER and NaijaSenti are excluded. Clarified this in `EXAMPLE_WORDS.md` and its generator.
+
+## 2026-10-07: Audit materials published
+
+Committed and pushed exactly seven requested files to GitHub default branch main in `0a7fda92341e5b6b9d40fd795703e01cb5bcf56f` (Add Llama 3.1 tokenizer identity reports, audit script and example-word outputs). Published both Llama 3.1 identity JSON reports, `src/complete_llama31_audit.py`, `src/example_word_table.py`, the example-word Markdown and metadata JSON, and `src/sentence_examples.py` only. Staged-file checks found no complete corpus sentences or Hugging Face token strings; hf_ matches were library function references. Remote main was checked and matches the commit. Raw sentence examples and corpus text were excluded. Manuscript, figure additions and outstanding research-summary changes remain local. This log entry was recorded after the requested push and is not part of that commit.
+
+## 2026-10-19: Llama 3.1 documentation reconciled
+
+The Llama 3.1 base and Instruct tokenizer comparisons were completed and committed in `0a7fda9`. Evidence: `results/tokenizer_identity_llama31.json` and `results/tokenizer_identity_llama31_instruct.json`.
+
+N-ATLaS has the same complete 128,256-entry token-to-ID mapping, merge rules, normalizer, pre-tokenizer, decoder and post-processor as both tested Llama 3.1 releases. Both comparisons produced identical token IDs on all 8,036 FLORES+ texts (0 mismatches), using unchanged published text with `add_special_tokens=False`. The special-token maps differ: N-ATLaS sets `pad_token` to `<|eot_id|>`; neither comparison model sets a pad token. N-ATLaS and Llama 3.1 Instruct share `eos_token=<|eot_id|>`, while the base model uses `<|end_of_text|>`. The N-ATLaS chat template matches Llama 3.1 Instruct exactly; the base model has no chat template.
+
+This entry supersedes the earlier "pending Llama 3.1" entries and access-related statements that left the comparison unresolved. Those entries remain as history. The comparisons establish tokenizer equivalence on the inspected components and inputs, not model or training provenance.

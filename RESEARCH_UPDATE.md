@@ -6,7 +6,7 @@ This is the current interpretation of the completed experiments. Exact revisions
 
 N-ATLaS and Llama 3 produced identical ordinary-text token IDs throughout FLORES+, MasakhaNER news, and NaijaSenti tweets. Their control-token configurations differ, but the inspected lexical pipeline is equivalent.
 
-The Llama 3.1 comparison is pending: the account received a Hugging Face 403 access denial for `meta-llama/Llama-3.1-8B`. We cannot attribute control-token differences from Llama 3 to N-ATLaS modifications until its likely base version is compared. The comparison script now pins revisions explicitly; the prepared Llama 3.1 revision is `d04e592bb4f6aa9cfee91e2e20afa771667e1d4b`.
+The Llama 3.1 base and Instruct comparisons are complete and were committed in `0a7fda9`. N-ATLaS has the same complete 128,256-entry token-to-ID mapping, merge rules, normalizer, pre-tokenizer, decoder and post-processor as both tested Llama 3.1 releases. Both comparisons produced identical token IDs on all 8,036 FLORES+ texts (0 mismatches), using unchanged published text with `add_special_tokens=False`. The special-token maps differ: N-ATLaS sets `pad_token` to `<|eot_id|>`; neither comparison model sets a pad token. N-ATLaS and Llama 3.1 Instruct share `eos_token=<|eot_id|>`, while the base model uses `<|end_of_text|>`. The N-ATLaS chat template matches Llama 3.1 Instruct exactly; the base model has no chat template. Reports: `results/tokenizer_identity_llama31.json` and `results/tokenizer_identity_llama31_instruct.json`. Tokenizer equivalence does not establish model or training provenance.
 
 Gemma uses fewer total tokens on identical text in each Nigerian-language subset:
 
@@ -84,3 +84,7 @@ The orthography run uses deterministic seed `20261001` to identify that experime
 - Exact premium, normalization and word-boundary refinements: `results/refinements/REFINED_RESULTS.md`, CSVs, and metadata; reproduce with `python src/refine_premiums.py`.
 
 Use the new orthography figure for the refined mechanism discussion. The earlier figure 4 remains the historical raw-reference result. News and tweet results lack a matched English subset, so they establish cross-tokenizer replication rather than a new English-relative tax. News punctuation spacing, code mixing, dataset selection, and within-document/user dependence limit cross-corpus generalization.
+
+## Llama 3.1 audit — 2026-10-04
+
+The previously pending comparisons are complete for both base and Instruct. N-ATLaS has the same complete 128,256-entry token-to-ID mapping and loaded backend definition as both pinned Llama 3.1 releases. Its chat template is identical to Instruct; its special-token map adds pad=eot. All requested file hashes differ. All 8,036 unchanged FLORES+ texts produce identical IDs without added special tokens. Earlier statements leaving Llama 3.1 identity unresolved are superseded by these reports; tokenizer equivalence does not establish model or training provenance.
