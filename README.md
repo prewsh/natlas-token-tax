@@ -4,6 +4,8 @@ Research artifacts for **Adapted Weights, Inherited Tokenizer: Measuring the Tok
 
 Paper: [PDF](paper/Precious_Ngwube_N-ATLaS_token_cost.pdf)
 
+Archived code and results: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23493742.svg)](https://doi.org/10.5281/zenodo.23493742)
+
 The PDF reports results produced by the code at commit 0a7fda9, which the paper cites in Appendix A. Later commits change documentation only.
 
 The primary metric is the **token-total premium**: total language tokens / total English tokens on the 2,009 aligned NFC-normalized FLORES+ sentences per language. Results are in [results/token_total_premiums/](results/token_total_premiums/).
