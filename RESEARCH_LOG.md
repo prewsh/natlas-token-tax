@@ -621,3 +621,7 @@ The Llama 3.1 base and Instruct tokenizer comparisons were completed and committ
 N-ATLaS has the same complete 128,256-entry token-to-ID mapping, merge rules, normalizer, pre-tokenizer, decoder and post-processor as both tested Llama 3.1 releases. Both comparisons produced identical token IDs on all 8,036 FLORES+ texts (0 mismatches), using unchanged published text with `add_special_tokens=False`. The special-token maps differ: N-ATLaS sets `pad_token` to `<|eot_id|>`; neither comparison model sets a pad token. N-ATLaS and Llama 3.1 Instruct share `eos_token=<|eot_id|>`, while the base model uses `<|end_of_text|>`. The N-ATLaS chat template matches Llama 3.1 Instruct exactly; the base model has no chat template.
 
 This entry supersedes the earlier "pending Llama 3.1" entries and access-related statements that left the comparison unresolved. Those entries remain as history. The comparisons establish tokenizer equivalence on the inspected components and inputs, not model or training provenance.
+
+## 2026-10-20: Baseline and NFC fertility values clarified
+
+The baseline tables in this log and `results/summary/BASELINE_RESULTS.md` used published text before NFC normalization and report a Yoruba fertility premium of 2.350 for N-ATLaS/Llama. The paper's NFC fertility premium is 2.326, as recorded in `results/refinements/REFINED_RESULTS.md`. Use the paper's NFC values; the earlier tables remain unchanged as historical results.

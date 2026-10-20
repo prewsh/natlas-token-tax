@@ -1,5 +1,7 @@
 # FLORES+ baseline tokenization results
 
+Computed on published text before NFC normalization. The paper's NFC values are in results/refinements/ (Yoruba fertility premium 2.326).
+
 These are corpus-level descriptive results. Tokens were counted 
 with `add_special_tokens=False`. Fertility is total tokens divided 
 by total whitespace-delimited words. Confidence intervals use 
